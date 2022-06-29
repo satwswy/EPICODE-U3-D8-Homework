@@ -24,6 +24,14 @@ export default function NavBar() {
                             TvShows
                         </div>
                     </Link>
+                    <Link to="/details/:movieId">
+                        <div
+                            className='nav-link'
+                            
+                        >
+                            Details
+                        </div>
+                    </Link>
                 </Nav>
             </Container>
         </Navbar></div>

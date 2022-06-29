@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
 import TvShows from "./components/TvShows";
 import Home from "./components/Home";
+import Details2 from "./components/Details2";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tvShows" element={<TvShows/>} />
+          <Route path="/details/:movieId" element={<Details2 />} />
+          <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </BrowserRouter>
