@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import SingleMovie from './SingleMovie'
 import { Container, Col, Row } from 'react-bootstrap'
-import { SpinnerCircularFixed } from "spinners-react"
+import { SpinnerDotted } from "spinners-react"
 
-
-export default class GalleryOne extends Component {
+export default class Gallery extends Component {
     state = {
         movies: [],
         isLoading: true,
@@ -14,7 +13,7 @@ export default class GalleryOne extends Component {
     }
     fetchGalleryOneMovies = async () => {
         try {
-            const url = "http://www.omdbapi.com/?apikey=1116749d&s=harry%20potter"
+            const url = `http://www.omdbapi.com/?apikey=1116749d&s=${this.props.query}`
             const response = await fetch(url)
             const data = await response.json()
             console.log(data)
@@ -32,7 +31,7 @@ export default class GalleryOne extends Component {
 
             <Container>
                 {this.state.isLoading && (
-           <SpinnerCircularFixed size={80} thickness={172} speed={133} color="rgba(57, 172, 76, 1)" secondaryColor="rgba(154, 57, 172, 1)" />
+            <SpinnerDotted size={68} thickness={172} speed={133} color="rgba(61, 172, 57, 1)" />
           )}
                 <Row className="justify-content-center mt-3">
                     {this.state.movies.map(movie => {
