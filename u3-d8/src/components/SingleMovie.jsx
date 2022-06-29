@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Card, Button, Container, Row , Col} from "react-bootstrap"
 import Details from './Details'
+import { Link } from 'react-router-dom'
 
 
 export default class SingleMovie extends Component {
@@ -12,7 +13,9 @@ export default class SingleMovie extends Component {
         return (
             
                         <Card >
+                            <Link to={'/details/' + this.props.movie.imdbID}>
                             <Card.Img variant="top" src={this.props.movie.Poster} />
+                            </Link>
                             <Card.Body>
                                 <Card.Title>{this.props.movie.Title}</Card.Title>
                                 <Card.Text>
