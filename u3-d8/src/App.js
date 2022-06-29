@@ -8,6 +8,7 @@ import GalleryThree from './components/GalleryThree'
 
 function App() {
   return (
+    <>
     <div>
       <NavBar />
       <h1>Harry Potter</h1>
@@ -22,6 +23,7 @@ function App() {
       
 
     </div>
+    </>
   );
 }
 

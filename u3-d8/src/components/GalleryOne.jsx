@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import SingleMovie from './SingleMovie'
 import { Container, Col, Row } from 'react-bootstrap'
-import { SpinnerDotted } from "spinners-react"
+
 
 export default class GalleryOne extends Component {
     state = {
@@ -31,7 +31,7 @@ export default class GalleryOne extends Component {
 
             <Container>
                 {this.state.isLoading && (
-            <SpinnerDotted size={68} thickness={172} speed={133} color="rgba(61, 172, 57, 1)" />
+           
           )}
                 <Row className="justify-content-center mt-3">
                     {this.state.movies.map(movie => {
