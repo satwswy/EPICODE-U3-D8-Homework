@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import SingleMovie from './SingleMovie'
 import { Container, Col, Row } from 'react-bootstrap'
+import { SpinnerCircularFixed } from "spinners-react"
 
 
 export default class GalleryOne extends Component {
@@ -31,7 +32,7 @@ export default class GalleryOne extends Component {
 
             <Container>
                 {this.state.isLoading && (
-           
+           <SpinnerCircularFixed size={80} thickness={172} speed={133} color="rgba(57, 172, 76, 1)" secondaryColor="rgba(154, 57, 172, 1)" />
           )}
                 <Row className="justify-content-center mt-3">
                     {this.state.movies.map(movie => {
